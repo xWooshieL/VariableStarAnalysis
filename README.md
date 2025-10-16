@@ -149,7 +149,7 @@ tests/
 ## Авторы
 
 - **Оригинальный проект (Java)**: [sevenstarknight](https://github.com/sevenstarknight/VariableStarAnalysis)
-- **Python-версия**: Никита Новицкий ([@xWooshieL]), Никита Борисов ([@nizier193]), Глеб Дудоров ([@Udnek])
+- **Python-версия**: [Никита Новицкий](https://github.com/xWooshieL), [Никита Борисов](https://github.com/nizier193), [Глеб Дудоров](https://github.com/Udnek)
 
 ## Благодарности
 
