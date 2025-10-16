@@ -13,28 +13,47 @@
 ## Структура проекта
 
 ```
-VariableStarAnalysis_py/
-├── analysis/
-│   ├── markov/                  # Марковские цепи, semi-supervised модели
-│   ├── df/                      # Derivatives fields анализ
-│   └── feature_engineering/     # Фиче-инжиниринг, выделение признаков
-├── lib/                         # Общие утилиты (matrix_utils.py и т.п.)
-├── data/                        # Датасеты/результаты (необязательно)
-├── tests/                       # Тесты (pytest)
-├── requirements.txt             # Зависимости Python
-├── README.md                    # Документация проекта
-├── .gitignore                   # Игнорируемые файлы
-└── LICENSE                      # Лицензия проекта (GPLv3)
+VariableStarAnalysis_py/                     # Корневая папка проекта
+├── analysis/                                # Модули анализа
+│   ├── __init__.py
+│   ├── feature_engineering/                 # Извлечение признаков
+│   │   ├── __init__.py
+│   │   └── feature_engineering.py            # Функции для статистических, FFT, PCA и периодограммных признаков
+│   ├── df/                                  # Анализ производных полей
+│   │   ├── __init__.py
+│   │   └── df_analysis.py                    # Генерация и классификация по derivatives fields
+│   └── markov/                              # Марковские модели
+│       ├── __init__.py
+│       └── ssmm_analysis.py                  # Semi-Supervised Markov Models и HMM
+├── lib/                                     # Утилиты и загрузчики
+│   ├── __init__.py
+│   ├── data_loader.py                        # Загрузка и предобработка UCR StarLightCurves
+│   └── utils.py                              # Общие функции: нормализация, сглаживание, визуализация
+├── data/                                    # Исходные датасеты
+│   └── StarLightCurves/                      # Распакованный UCR StarLightCurves
+├── tests/                                   # Unit-тесты (pytest)
+│   └── __init__.py
+├── results/                                 # Папка для сохранения результатов экспериментов
+├── main_experiment.py                       # Основной скрипт запуска экспериментов
+├── requirements.txt                         # Список Python-зависимостей
+├── README.md                                # Документация проекта
+├── .gitignore                               # Игнорируемые файлы
+└── LICENSE                                  # Лицензия проекта (GPLv3)
+
+
 ```
 
-### Описание модулей:
+### Описание основных модулей:
 - **analysis/**: основные модули анализа переменных звёзд
-  - `markov/` — реализация марковских цепей и semi-supervised моделей для классификации
-  - `df/` — анализ производных полей (derivatives fields) кривых блеска
-  - `feature_engineering/` — извлечение признаков из фотометрических временных рядов
-- **lib/**: общие утилиты и вспомогательные функции (матричные операции, конвертеры и т.д.)
-- **data/**: папка для хранения датасетов и результатов анализа
+  - `feature_engineering/` — извлечение статистических, FFT, PCA и периодограммных признаков
+  - `df/` — анализ производных полей (derivatives fields) для классификации
+  - `markov/` — полу-контролируемые марковские модели и HMM
+- **lib/**: общие утилиты и загрузчики данных
+  - `data_loader.py` — загрузка и предобработка UCR StarLightCurves датасета
+  - `utils.py` — нормализация, сглаживание, визуализация кривых блеска
+- **data/**: папка для хранения датасетов (UCR StarLightCurves)
 - **tests/**: unit-тесты для всех модулей (pytest)
+- **results/**: сохранение результатов экспериментов и сравнений методов
 
 ## Установка
 
@@ -154,14 +173,14 @@ tests/
 ## Благодарности
 
 - Оригинальному автору Java-версии проекта за разработку алгоритмов и методологии
-- Центральному Университету (Т-Банк) за поддержку исследований
+- Центральному Университету за поддержку исследований
 - Научной студии по переменным звёздам
 
 ## Контакты
 
 Если у вас есть вопросы или предложения:
 - Создайте Issue в репозитории
-- Напишите одному из нас на email: edu.centraluniversity.ru, n.borisov@edu.centraluniversity.ru, g.dudorov@edu.centraluniversity.ru
+- Напишите одному из нас на email: n.novitskiy@edu.centraluniversity.ru, n.borisov@edu.centraluniversity.ru, g.dudorov@edu.centraluniversity.ru
 
 ## Roadmap
 
