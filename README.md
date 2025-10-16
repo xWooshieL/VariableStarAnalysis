@@ -154,14 +154,14 @@ tests/
 ## Благодарности
 
 - Оригинальному автору Java-версии проекта за разработку алгоритмов и методологии
-- Центральному Университету (Т-Банк) за поддержку исследований
+- Центральному Университету за поддержку исследований
 - Научной студии по переменным звёздам
 
 ## Контакты
 
 Если у вас есть вопросы или предложения:
 - Создайте Issue в репозитории
-- Напишите одному из нас на email: edu.centraluniversity.ru, n.borisov@edu.centraluniversity.ru, g.dudorov@edu.centraluniversity.ru
+- Напишите одному из нас на email: n.novitskiy@edu.centraluniversity.ru, n.borisov@edu.centraluniversity.ru, g.dudorov@edu.centraluniversity.ru
 
 ## Roadmap
 
