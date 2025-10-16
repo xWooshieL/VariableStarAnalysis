@@ -7,7 +7,7 @@ import numpy as np
 from scipy import signal, fft
 from scipy.stats import skew, kurtosis
 from sklearn.decomposition import PCA
-from astropy.stats import LombScargle
+from astropy.timeseries import LombScargle
 from typing import Dict, List, Tuple
 import pandas as pd
 
