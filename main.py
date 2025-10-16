@@ -12,10 +12,12 @@ from sklearn.svm import SVC
 import matplotlib.pyplot as plt
 
 # Import our modules
-from data_loader import load_ucr_starlight, UCRStarLightLoader
-from feature_engineering import LightCurveFeatureExtractor, extract_features_batch
-from df_analysis import DFAnalysis, DFOptions, run_df_analysis
-from ssmm_analysis import SSMMAnalysis
+# Import our modules
+from lib.data_loader import load_ucr_starlight, UCRStarLightLoader
+from analysis.feature_engineering.feature_engineering import LightCurveFeatureExtractor, extract_features_batch
+from analysis.df.df_analysis import DFAnalysis, DFOptions, run_df_analysis
+from analysis.markov.ssmm_analysis import SSMMAnalysis
+
 
 
 def run_feature_engineering_experiment(X_train, y_train, X_test, y_test):
@@ -210,7 +212,7 @@ def main():
     print("="*60)
     
     # Configuration
-    DATA_DIR = "data/StarLightCurves"  # Update this path
+    DATA_DIR = "data/UCR"  # Update this path
     
     # Check if data directory exists
     if not Path(DATA_DIR).exists():
