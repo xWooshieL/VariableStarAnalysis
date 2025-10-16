@@ -13,32 +13,35 @@
 ## Структура проекта
 
 ```
-VariableStarAnalysis_py/                     # Корневая папка проекта
+VariableStarAnalysis/                        # Корневая папка проекта
 ├── analysis/                                # Модули анализа
 │   ├── __init__.py
 │   ├── feature_engineering/                 # Извлечение признаков
 │   │   ├── __init__.py
-│   │   └── feature_engineering.py            # Функции для статистических, FFT, PCA и периодограммных признаков
+│   │   └── feature_engineering.py           # Статистические, FFT, PCA, периодограммные признаки
 │   ├── df/                                  # Анализ производных полей
 │   │   ├── __init__.py
-│   │   └── df_analysis.py                    # Генерация и классификация по derivatives fields
+│   │   └── df_analysis.py                   # Генерация и классификация по derivatives fields
 │   └── markov/                              # Марковские модели
 │       ├── __init__.py
-│       └── ssmm_analysis.py                  # Semi-Supervised Markov Models и HMM
+│       └── ssmm_analysis.py                 # Semi-Supervised Markov Models и HMM
 ├── lib/                                     # Утилиты и загрузчики
 │   ├── __init__.py
-│   ├── data_loader.py                        # Загрузка и предобработка UCR StarLightCurves
-│   └── utils.py                              # Общие функции: нормализация, сглаживание, визуализация
+│   ├── data_loader.py                       # Загрузка и предобработка различных датасетов (UCR, LINEAR и др.)
+│   └── utils.py                             # Общие функции: нормализация, сглаживание, визуализация
 ├── data/                                    # Исходные датасеты
-│   └── StarLightCurves/                      # Распакованный UCR StarLightCurves
+│   ├── UCR/                                 # UCR StarLightCurves и другие наборы UCR
+│   ├── LINEAR/                              # LINEAR Variable Star Dataset
+│   └── OTHER_DATASETS/                      # Прочие датасеты
 ├── tests/                                   # Unit-тесты (pytest)
 │   └── __init__.py
 ├── results/                                 # Папка для сохранения результатов экспериментов
-├── main_experiment.py                       # Основной скрипт запуска экспериментов
+├── main_experiment.py                       # Основной скрипт запуска экспериментов на любом датасете
 ├── requirements.txt                         # Список Python-зависимостей
 ├── README.md                                # Документация проекта
 ├── .gitignore                               # Игнорируемые файлы
 └── LICENSE                                  # Лицензия проекта (GPLv3)
+
 
 
 ```
